@@ -1,0 +1,142 @@
+/* Use a modern, easy-to-read font */
+body {
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e6f7fa; /* light blue background for the page */
+}
+
+/* Style for the CTA banner section */
+.cta-banner {
+  background-color: #71bcc9; /* teal background */
+  color: #fbf8f8;
+  padding: 100px 20px;
+  text-align: center;
+  background-image: url('img/cta-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative; /* for overlay positioning */
+  overflow: hidden;
+}
+
+/* Overlay to make text readable */
+.cta-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 144, 163, 0.7); /* semi-transparent teal overlay */
+  z-index: 1;
+}
+
+/* Large, bold heading */
+.cta-banner h1 {
+  font-size: 3.5em;
+  margin-top: 0; /* remove extra space above heading */
+  margin-bottom: 32px; /* increased space below heading */
+  font-weight: bold;
+  position: relative;
+  z-index: 2;
+}
+
+/* Short description styling */
+.cta-banner p {
+  font-size: 1.2em;
+  margin-bottom: 40px; /* increased space below paragraph */
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Eye-catching CTA button */
+.cta-button {
+  display: inline-block;
+  background-color: #2ed8c3; /* bright teal */
+  color: #1e3d4c; /* dark blue text for contrast */
+  padding: 16px 36px;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px; /* slightly rounded corners */
+  border: none;
+  cursor: pointer;
+  /* Add a simple shadow for emphasis */
+  box-shadow: 0 2px 8px rgba(30, 61, 76, 0.15);
+  position: relative;
+  z-index: 2;
+}
+
+/* Button hover effect */
+.cta-button:hover {
+  background-color: #23b6a0; /* slightly darker teal on hover */
+}
+
+/* Simple site header styling */
+.site-header {
+  background-color: #0b5e6d; /* match banner color */
+  color: #ffffff;
+  text-align: center;
+  padding: 18px 0 12px 0;
+}
+
+/* Site name styling */
+.site-header h2 {
+  margin: 0;
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Info section below the banner */
+.info-section {
+  padding: 50px 20px;
+  justify-content: center;
+  background: #ffffff;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(30, 61, 76, 0.08);
+  display: flex; /* simple two-column layout */
+  }
+
+/* Image column */
+.info-image {
+  display: table-cell;
+  width: 100%;
+  max-width: 400px; /* increased from 320px to 400px */
+  vertical-align: middle;
+  border-radius: 15px;
+  margin-right: 30px;
+}
+
+/* Text column */
+.info-text {
+  display: table-cell;
+  width: 50%;
+  vertical-align: middle;
+  padding-left: 24px;
+  color: #1e3d4c;
+  font-size: 1.1em;
+}
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 700px) {
+  .info-section {
+    display: block;
+    text-align: center;
+  }
+  .info-image,
+  .info-text {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 20px auto;
+    padding-left: 0;
+  }
+  .info-text {
+    margin-bottom: 0;
+  }
+}
